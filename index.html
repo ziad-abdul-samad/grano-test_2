@@ -1,421 +1,152 @@
-/* components  */
-.special-title {
-    color: var(--main-color-p);
-    background-color: var(--main-color-y);
-    text-align: center;
-    box-shadow: 0px 1px 4px var(--alt-color-y),
-    0px -1px 7px var(--alt-color-y);
-    width: fit-content;
-    padding: 10px 30px;
-    margin: 30px auto;
-    border-top-left-radius: 19% 53%;
-    border-bottom-right-radius: 19% 53%;
-}
-.sections-title {
-    font-size: 20px;
-    color: var(--main-color-p);
-    text-shadow: 0px 3px 3px var(--alt-color-y);
-    padding: 5px;
-}
-.number {
-    font-family: 'Poppins', sans-serif;
-}
-/* components  */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- google fonts  -->
+    <title>grano || resturant</title>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+        <a href="#">
+        <img src="images/logo.jpg" alt=""></a>
+        <div class="menuu bx bx-menu" id="menu-icon"></div>
+        <div class="list">
+        <ul>
+            <li><a href="#s">السندويش  </a></li>
+        <li><a href="#m">الوجبات</a></li>
+        <li><a href="#p">البيتزا</a></li>
+        <li><a href="#salad">السلطات</a></li>
+        </ul>
+        </div>
 
-/* #67347F main purple */
-/* #00CED5 blue */
-/* #FCDA00 yellow */
-/* start global rules  */
-
-* {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-decoration: none;
-    }
-    :root {
-    --blue:#00CED5;
-    --main-color-p:#67347F;
-    --alt-color-p:#BE8CE5;
-    --main-color-y : #ffeb3b;
-    --alt-color-y:#fff176;
-    --gradient-p:linear-gradient(103deg, rgba(93,42,123,1) 44%, rgba(190,140,229,1) 100%);
-    --gradient-y :linear-gradient(103deg, rgba(255,235,59,1) 33%, rgba(255,241,118,1) 100%);
-    --mixed-gradient:linear-gradient(74deg, rgba(255,235,59,1) 0%, rgba(93,42,123,1) 73%);
-    --font-family:'El Messiri', sans-serif;
-    }
-
-span {
-    color: var(--main-color-y);
-}
-
-    .container {
-    padding-left: 10px;    
-    padding-right: 10px;
-    margin-left: auto;    
-    margin-right: auto;
-    }
-    /* @media(min-width:768px) {
-    .container {
-    width: 100%;
-    }    
-    } */
-    html {
-    scroll-behavior: smooth;
-    }
-    body {
-    text-transform: capitalize;   
-    font-family: var(--font-family);
-    height: 6000px;
-    }
-
-    /* end global rules  */
-    /* header  */
-    header {
-        padding-top:5px ;
-        padding-bottom:5px ;
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 100000;
-        width: 100%;
-        background-color:white;
-        box-shadow: 0 4px 20px var(--main-color-p);
-
-    }
-header .container {
-display: flex;
-justify-content: space-between;
-/* padding: 5px; */
-align-items: center;
-}
-header .container img {
-    width: 55px;
-    border-radius: 50%;
-}
-header .container #menu-icon {
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 100001;
-    display: none;
-}
-header .container ul {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-header .container ul li {
-    padding:  10px;
-    position: relative;
-}
-header .container ul li a {
-    color:var(--main-color-p) ;
-    font-size: 16px;
-    font-weight: 500;
-}
-header .container ul li a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 3px;
-    background: var(--main-color-p);
-    bottom: -4px;
-    left: 0;
-    transition: 0.3s;
-}
-header .container ul li a:hover::after {
-    width: 100%;
-} 
-/* ################ */
-@media (max-width:768px) {
-    header .container {
-        /* justify-content: space-around; */
-        align-items: center;
-        gap: 40px;
-    }
-    header .container #menu-icon {
-        display: initial;
-        color: var(--main-color-p);
-        right: 0;
-        position: absolute;
-        margin-right: 10px;
-    }
-
-    header ul.active {
-        top: 100%;
-    }
-    header ul {
-        display: flex;
-        flex-direction: column;
-        top: -500px;
-        left: 0;
-        right: 0;
-        position: absolute;
-        background-color: white;
-        box-shadow:0 0px 1px var(--alt-color-p) ;
-        transition: 0.3s ease;
-        text-align: right;
-    }
-    header ul a {
-        border-right: 5px solid var(--alt-color-y);
-        display: block;
-        padding: 10px;
-        transition: 0.3s ease;
-
-    }
-    header ul li:hover a{
-        color:var(--main-color-p);
-        background-color: var(--main-color-y);
-        border: none;
-    }
-    header .container ul li a::after {
-        display: none;
-    }
-}
-/* scroll change color for header  */
-.scroll-header {
-    box-shadow:0 1px 4px var(--alt-color-y) ;
-    transition: 0.3s;
-}
-
-/* scroll change color for header  */
-    /* header  */
-    /* landing  */
-    .landing {
-        position: relative;
-        /* height: 100vh; */
-        background-image: url(../images/wave.png);
-        background-repeat: no-repeat;
-        /* background-position: center; */
-        background-size: contain;
-        top: 0;
-        margin-top: 78.7px;
-    }
-
-    .landing .container {
-        display: flex;
-        flex-direction: column;
-        height: calc(88vh - 74px);
-        align-items: center;
-    
-    }
-    .landing .container .text {
-        direction: rtl;
-        text-align: center;
-
-    }
-    .landing .container .text h1 {
-        margin-top: 90px;
-        font-size: 30px;
-        color: var(--main-color-y);
-        text-shadow:1px 2px 2px var(--alt-color-p);
-    }
-    .landing .container .text h1 span {
-        color: var(--alt-color-p);
-        font-size: 30px;
-    }
-    .landing .container .text .title {
-        color: var(--alt-color-p);
-        font-size: 18px;
-        font-weight: 500;
-    }
-    .landing .container .text .title span {
-        font-size: 30px;
-        color: var(--main-color-y);
-    }
-    .landing .container .text .description {
-        color: #777;
-        font-size: 16px;
-    }
-    .landing .container .text .description span {
-    color: var(--alt-color-p);
-    font-size: 30px;
-    }
-    
-    .landing .container .image img {
-        width: 100%;
-        max-width: 100%;
-        margin-top: -60px;
-    }
-
-    /* landing  */
-    /* products */
-.products {
-    position: relative;
-    direction: rtl;
-}
-.product {
-    display: grid;
-    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
-    padding: 0 10px;
-}
-.product .box {
-    /* background-image: url(../images/notDIshImage.png);
-    background-size: contain; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 10px 0;
-    box-shadow: 0px 0px 5px var(--main-color-p), 0px 4px 8px var(--main-color-y);
-    padding: 10px;
-    text-align: center;
-    border-radius: 16px;
-    gap: 7px;
-}
-.product .box {
-    position: relative;
-}
-.product .box::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../images/bg.jpg);
-    background-size: contain;
-    filter: blur(1px);
-    z-index: -1;
-}
-.product .box img {
-    width: 80%;
-    max-width: 100%;
-    border-radius: 10px;
-}
-.product .box .title {
-    font-size: 22px;
-    /* padding: 3px 5px; */
-    background-color: var(--main-color-y);
-    color: white;
-    /* color: var(--main-color-y); */
-    border-radius: 12px;
-    padding: 5px 30px;
-    margin: 10px 0;
-}
-.product .box .description {
-    background-color: var(--main-color-p);
-    color: white;
-    font-size: 18px;
-    /* color: var(--main-color-p); */
-    margin-right: 5px;
-    padding: 15px 10px;
-    border-radius: 12px;
-}
-
-    /* products */
-    /* fooooooter */
-    footer {
-        padding: 40px 0;
-        direction: rtl;
-        text-align: center;
-    }
-    footer .container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
-    }
-    footer .container .box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 40px;
-    } 
-    footer .container .box img {
-        width: 200px;
-        height: 200px;
-        /* border-radius: 30%; */
-        border: 1px solid var(--alt-color-p);
-        margin-bottom: 10px;
-        margin-top: 10px;
-        border-top-right-radius: 38%;
-        border-top-left-radius: 8%;
-        border-bottom-left-radius: 38%;
-        border-bottom-right-radius: 8%;
-    }
-    footer .container .box p {
-        font-size: 25px;
-        color: var(--main-color-y);
-        font-weight: 900;
-    }
-    footer .container .box span {
-        display: block;
-        font-size: 18px;
-        color: var(--alt-color-p);
-        font-weight: 500;
-    }
-    footer .container .box span.number {
-        direction: ltr;
-    }
-    .about-us {
-        background: var(--main-color-y);
-        text-align: center;
-        color: white;
-        box-shadow: 0px 1px 4px var(--alt-color-y),
-        0px -1px 7px var(--alt-color-y);
-        /* width: fit-content; */
-        padding: 10px 30px;
-        border-radius: 6px;
-        margin: 30px auto;
-        font-size: 24px;
-    }
-    footer .box .social {
-        display: flex;
-        justify-content: center;
+        </div>
+        </header>
+<main>
+    <section class="landing">
+        <div class="container">
+            <div class="text">
+                <h1>اهلاً بكم في غرانو <span>.</span></h1>
+                <p class="title">المكان الذي تريد زيارته كل يوم لإسعاد نفسك  <span>.</span></p>
+                <div class="description">
+                    تصفّح الموقع و قم باستكشاف أصنافنا الشهية<span>.</span>
+                </div>
+            </div>
+            <div class="image">
+                <img src="images/wwwwwwwwwww.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="products">
+        <div class="product">
+            <h2 class="special-title" id="s">السندويش</h2>
+            <h1 class="sections-title">السندويش بصمون فيينا</h1>
+            <div class="box gretan">
+                <img src="images/gretan-sandwich.jpg" alt="">
+                <h1 class="title"> اسكالوب غريتان </h1>
+                <p class="description sandwich">3 قطع دجاج - بشاميل - 3 أنواع جبنة - فطر - كوكتيل - خس .</p>
+            </div>
+            <div class="box">
+                <img src="images/polo-sandwish.jpg" alt="">
+                <h1 class="title "> تشكن بولو </h1>
+                <p class="description ">قطع دجاج - نعناع - جبنة موزريلا بانيه - كوكتيل - خس .</p>
+            </div>
+            <h2 class="special-title" id="m">الوجبات</h2>
+            <div class="box">
+                <img src="images/meal-1.jpg" alt="">
+                <h1 class="title">دجاج الا كينغ</h1>
+                <p class="description">فتايل دجاج مقلية - اناناس - فليفلة - بصل ناعم - فطر فرش - اشلميش - كريمة فريش - مرافق رز .</p>
+            </div>
+            <div class="box">
+                <img src="images/chicken-roll.jpg" alt="">
+                <h1 class="title"> تشكن رول </h1>
+                <p class="description">رول دجاج محشي ( جبنة - فطر - ذرة - حبش ) - صوص أجبان - مرافق بطاطا .</p>
+            </div>
+            <div class="box">
+                <img src="images/chicken-permoda.jpg" alt="">
+                <h1 class="title">  برمودا تشكن</h1>
+                <p class="description">شرحات دجاج مقلية بالسمسم محشية ( باستا - فطر - ذرة - جبنة ) مع صوص كريمي - حبش مدخن - مرافق بطاطا .</p>
+            </div>
+            <h1 class="sections-title">وجبات كلاسيك</h1>
+            <div class="box">
+                <img src="images/crispy-meal.jpg" alt="">
+                <h1 class="title"> كريسبي </h1>
+                <p class="description"></p>
+            </div>
         
-        }
-        
-        footer .box .social li {
-        margin-right: 10px;
-        }
-        footer .box .social li a {
-        justify-content: center;
-        align-items: center;
-        display: inline-flex;
-        color: white;
-        font-size: 20px;
-        width: 35px;
-        height: 35px;
-        border-radius: 12px;
-        }
-        footer .box .social .facebook {
-        background-color: #1877f2;
-        }
-        footer .box .social .instagram {
-        background: #f09433; 
-        background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-        background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-        background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );    }
-    /* fooooooter */
-    footer .copyright {
-        padding: 25px 0;
-        text-align: center;
-        color: var(--main-color-p);
-        margin: 20px 0  0;
-        border-top: 1px solid var(--main-color-y);
-        font-size: 16px;
-        direction: ltr;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 400;
-        }
-        footer .copyright  i {
-        color: var(--main-color-y);
-        margin: 0 3px;
-        }
-        footer .ziad-info {
-        color: var(--main-color-p);
-        border-top: 1px solid var(--main-color-y);
-        padding: 25px 0;
-        text-align: center;
-        line-height: 1.6;
-        font-size: 16px;
-        direction: ltr;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 400;
-        }
-        footer .ziad-info i {
-        color: var(--main-color-y);
-        margin-left: 3px;
+            <!-- <div class="box">
+                <img src="images/meal-1.jpg" alt="">
+                <h1 class="title">  </h1>
+                <p class="description"></p>
+            </div> -->
+        </div>
+        <!-- <h1 class="sections-title">وجبات كلاسيك</h1>
+        <h1 class="sections-title"> وجبات الأطفال</h1>
+        <h2 class="special-title">السندويش</h2>
+        <h1 class="sections-title">السندويش بصمون برغر</h1>
+        <h1 class="sections-title">السندويش بخبز خاص</h1>
+        <h1 class="sections-title">السندويش بصمون فيينا</h1>
+        <h1 class="sections-title">السندويش بصمون الفاهيتا</h1>
+        <h2 class="special-title">الوجبات</h2>
+        <h2 class="special-title">البيتزا</h2>
+        <h2 class="special-title">السلطات</h2> -->
 
-        }
+    </section>
+</main>
+<footer>
+    <h3 class="about-us">اعرف عننا أكثر!</h3>
+<div class="container">
+    <div class="box">
+        <p>لتقديم أيّ ملاحظات:</p>
+        <img src="images/Contact us-pana.png" alt="">
+        <span class="number">0933 132 005</span>
+        <span class="number">031 2222251</span>
+    </div>
+    <div class="box">
+        <p>الموقع الجغرافي لغرانو:</p>
+        <img src="images/Navigation-amico.png" alt="">
+        <span>الكورنيش، مول الخواجة، الطابق الأوّل.</span>
+    </div>
+    <div class="box">
+        <p>تابعونا على مواقع التواصل الاجتماعي:</p>
+        <img src="images/Social networking-cuate.png" alt="">
+        <ul class="social">
+            <li>
+            <a href="https://www.facebook.com/profile.php?id=100094476200135" class="facebook">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+            </li>
+            <li>
+            <a href="https://www.instagram.com/grano.snack.homs/" class="instagram" >
+            <i class="fab fa-instagram"></i>
+            </a>
+            </li>
+            
+            </ul>
+    </div>
+</div>
+<p class="copyright">Made With<i class="fa-solid fa-heart"></i> By ziad abdul samad</p>
+<div class="ziad-info">
+<div class="container">
+<p> instagram <i class="fa-brands fa-instagram"></i> : developer.ziad.abdulsamad</p>
+<p>whatsapp <i class="fa-brands fa-whatsapp"></i> : +963997546588</p>
+<p>what are you waiting for? call me to make your own website.<i class="fa-solid fa-wand-magic-sparkles"></i></p>
+</div>
+</div>
+</footer>
+<script src="scrollreveal.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="index.js"></script>
+</body>
+</html>

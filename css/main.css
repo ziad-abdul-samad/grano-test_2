@@ -1,14 +1,15 @@
 /* components  */
 .special-title {
-    background: var(--main-color-y);
+    color: var(--main-color-p);
+    background-color: var(--main-color-y);
     text-align: center;
-    color: white;
     box-shadow: 0px 1px 4px var(--alt-color-y),
     0px -1px 7px var(--alt-color-y);
     width: fit-content;
     padding: 10px 30px;
-    border-radius: 6px;
     margin: 30px auto;
+    border-top-left-radius: 19% 53%;
+    border-bottom-right-radius: 19% 53%;
 }
 .sections-title {
     font-size: 20px;
@@ -194,7 +195,7 @@ header .container ul li a:hover::after {
     .landing .container {
         display: flex;
         flex-direction: column;
-        height: calc(100vh - 74px);
+        height: calc(80vh - 74px);
         align-items: center;
     
     }
@@ -249,6 +250,8 @@ header .container ul li a:hover::after {
     padding: 0 10px;
 }
 .product .box {
+    /* background-image: url(../images/notDIshImage.png);
+    background-size: contain; */
     display: flex;
     align-items: center;
     gap: 10px;
@@ -259,6 +262,21 @@ header .container ul li a:hover::after {
     padding: 10px;
     text-align: center;
     border-radius: 16px;
+}
+.product .box {
+    position: relative;
+}
+.product .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/notDIshImage.png);
+    background-size: contain;
+    filter: blur(10px);
+    z-index: -1;
 }
 .product .box img {
     width: 90%;
@@ -272,7 +290,7 @@ header .container ul li a:hover::after {
     color: white;
     border-radius: 12px;
     padding: 5px 10px;
-        margin: 15px 0;
+    margin: 10px 0;
 }
 .product .box .description {
     background-color: var(--main-color-p);
@@ -280,18 +298,16 @@ header .container ul li a:hover::after {
     font-size: 18px;
     /* padding: 2px 5px; */
     margin-right: 5px;
-    padding: 5px 10px;
+    padding: 15px 10px;
     border-radius: 12px;
 }
-.product .box .title.sandwich {
-    background-color: var(--blue);
-    color: var(--main-color-p);
-}
+
     /* products */
     /* fooooooter */
     footer {
         padding: 40px 0;
         direction: rtl;
+        text-align: center;
     }
     footer .container {
         display: grid;
@@ -307,10 +323,14 @@ header .container ul li a:hover::after {
     footer .container .box img {
         width: 200px;
         height: 200px;
-        border-radius: 30%;
+        /* border-radius: 30%; */
         border: 1px solid var(--alt-color-p);
-        margin-bottom: 20px;
-        margin-top:20px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        border-top-right-radius: 38%;
+        border-top-left-radius: 8%;
+        border-bottom-left-radius: 38%;
+        border-bottom-right-radius: 8%;
     }
     footer .container .box p {
         font-size: 25px;
@@ -319,7 +339,7 @@ header .container ul li a:hover::after {
     }
     footer .container .box span {
         display: block;
-        font-size: 20px;
+        font-size: 18px;
         color: var(--alt-color-p);
         font-weight: 500;
     }
@@ -353,8 +373,8 @@ header .container ul li a:hover::after {
         display: inline-flex;
         color: white;
         font-size: 20px;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         border-radius: 12px;
         }
         footer .box .social .facebook {
@@ -375,6 +395,8 @@ header .container ul li a:hover::after {
         border-top: 1px solid var(--main-color-y);
         font-size: 16px;
         direction: ltr;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
         }
         footer .copyright  i {
         color: var(--main-color-y);
@@ -388,8 +410,11 @@ header .container ul li a:hover::after {
         line-height: 1.6;
         font-size: 16px;
         direction: ltr;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
         }
         footer .ziad-info i {
         color: var(--main-color-y);
         margin-left: 3px;
+
         }

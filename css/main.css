@@ -272,6 +272,7 @@ header .container ul li a:hover::after {
     color: white;
     border-radius: 12px;
     padding: 5px 10px;
+        margin: 15px 0;
 }
 .product .box .description {
     background-color: var(--main-color-p);
@@ -304,20 +305,21 @@ header .container ul li a:hover::after {
         margin-bottom: 40px;
     } 
     footer .container .box img {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         border-radius: 30%;
         border: 1px solid var(--alt-color-p);
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+        margin-top:20px;
     }
     footer .container .box p {
-        font-size: 20px;
+        font-size: 25px;
         color: var(--main-color-y);
         font-weight: 900;
     }
     footer .container .box span {
         display: block;
-        font-size: 16px;
+        font-size: 20px;
         color: var(--alt-color-p);
         font-weight: 500;
     }
@@ -351,8 +353,8 @@ header .container ul li a:hover::after {
         display: inline-flex;
         color: white;
         font-size: 20px;
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         border-radius: 12px;
         }
         footer .box .social .facebook {

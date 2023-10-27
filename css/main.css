@@ -195,7 +195,7 @@ header .container ul li a:hover::after {
     .landing .container {
         display: flex;
         flex-direction: column;
-        height: calc(80vh - 74px);
+        height: calc(88vh - 74px);
         align-items: center;
     
     }
@@ -254,7 +254,6 @@ header .container ul li a:hover::after {
     background-size: contain; */
     display: flex;
     align-items: center;
-    gap: 10px;
     justify-content: center;
     flex-direction: column;
     margin: 10px 0;
@@ -262,6 +261,7 @@ header .container ul li a:hover::after {
     padding: 10px;
     text-align: center;
     border-radius: 16px;
+    gap: 7px;
 }
 .product .box {
     position: relative;
@@ -273,13 +273,13 @@ header .container ul li a:hover::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/notDIshImage.png);
+    background-image: url(../images/bg.jpg);
     background-size: contain;
-    filter: blur(10px);
+    filter: blur(1px);
     z-index: -1;
 }
 .product .box img {
-    width: 90%;
+    width: 80%;
     max-width: 100%;
     border-radius: 10px;
 }
@@ -288,15 +288,16 @@ header .container ul li a:hover::after {
     /* padding: 3px 5px; */
     background-color: var(--main-color-y);
     color: white;
+    /* color: var(--main-color-y); */
     border-radius: 12px;
-    padding: 5px 10px;
+    padding: 5px 30px;
     margin: 10px 0;
 }
 .product .box .description {
     background-color: var(--main-color-p);
     color: white;
     font-size: 18px;
-    /* padding: 2px 5px; */
+    /* color: var(--main-color-p); */
     margin-right: 5px;
     padding: 15px 10px;
     border-radius: 12px;

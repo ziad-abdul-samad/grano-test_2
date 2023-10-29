@@ -101,6 +101,13 @@ header .container img {
     width: 55px;
     border-radius: 50%;
 }
+header .container .b-i {
+    right: 40px;
+    position: absolute;
+    color: var(--main-color-p);
+    font-size: 18px;
+    font-weight: 900;
+}
 header .container #menu-icon {
     font-size: 24px;
     cursor: pointer;
@@ -292,6 +299,13 @@ header .container ul li a:hover::after {
     border-radius: 10px;
     border: 1px solid var(--alt-color-p);
 }
+.product .box .title-price {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    direction: rtl;
+    flex-direction: row;
+}
 .product .box .title {
     font-size: 22px;
     /* padding: 3px 5px; */
@@ -311,7 +325,19 @@ header .container ul li a:hover::after {
     padding: 15px 10px;
     border-radius: 12px;
 }
-
+.product .box .description p {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--alt-color-p);    
+    font-weight: 900;
+    direction: ltr;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+    width: fit-content;
+    margin: 5px auto;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
     /* products */
     /* fooooooter */
     footer {

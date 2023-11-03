@@ -10,7 +10,7 @@
     margin: 30px auto;
     border-top-left-radius: 19% 53%;
     border-bottom-right-radius: 19% 53%;
-    font-size: 25px;
+    font-size: 22px;
 }
 @media (max-height:650px) {
     .special-title {

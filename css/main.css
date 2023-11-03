@@ -10,18 +10,26 @@
     margin: 30px auto;
     border-top-left-radius: 19% 53%;
     border-bottom-right-radius: 19% 53%;
+    font-size: 25px;
 }
-@media (max-height:595px) {
+@media (max-height:650px) {
     .special-title {
         margin: 60px auto;
     }
 }
 .sections-title {
-    font-size: 20px;
-    color: var(--main-color-p);
-    text-shadow: 0px 3px 3px var(--alt-color-y);
-    padding: 5px;
+    font-size: 16px;
+    color: var(--main-color-y);
+    /* text-shadow: 0px 3px 3px var(--alt-color-y); */
+    padding: 10px;
+    text-align: right;    
+    background-color: var(--main-color-p);
+    width: fit-content;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
+
 .number {
     font-family: 'Poppins', sans-serif;
 }
@@ -250,7 +258,7 @@ header .container ul li a:hover::after {
     .landing .container .image img {
         width: 100%;
         max-width: 100%;
-        margin-top: -60px;
+        /* margin-top: -60px; */
     }
 
     /* landing  */
@@ -275,9 +283,10 @@ header .container ul li a:hover::after {
     box-shadow: 0px 0px 5px var(--main-color-p), 0px 4px 8px var(--main-color-y);
     padding: 10px;
     text-align: center;
-    border-radius: 16px;
-    gap: 7px;
+    border-radius: 6px;
+    /* gap: 7px; */
 }
+
 .product .box {
     position: relative;
 }
@@ -307,23 +316,28 @@ header .container ul li a:hover::after {
     flex-direction: row;
 }
 .product .box .title {
-    font-size: 22px;
+    font-size: 20px;
     /* padding: 3px 5px; */
     background-color: var(--main-color-y);
     color: white;
     /* color: var(--main-color-y); */
-    border-radius: 12px;
+    border-radius: 4px;
     padding: 5px 30px;
     margin: 10px 0;
 }
+.product .box .title span {
+    color: var(--main-color-p);
+    font-family: 'Poppins', sans-serif;
+
+} 
 .product .box .description {
     background-color: var(--main-color-p);
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     /* color: var(--main-color-p); */
     margin-right: 5px;
-    padding: 15px 10px;
-    border-radius: 12px;
+    padding: 5px 5px;
+    border-radius: 5px;
 }
 .product .box .description p {
     font-family: 'Poppins', sans-serif;
@@ -331,12 +345,13 @@ header .container ul li a:hover::after {
     font-weight: 900;
     direction: ltr;
     font-size: 16px;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     text-align: center;
     width: fit-content;
     margin: 5px auto;
     padding: 5px 10px;
-    border-radius: 6px;
+    border-radius: 2px;
+    line-height: 1.6;
 }
     /* products */
     /* fooooooter */
